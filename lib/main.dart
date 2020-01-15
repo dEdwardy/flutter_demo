@@ -7,6 +7,8 @@ import './demo/layout_demo.dart';
 import './demo/sliver_demo.dart';
 import './demo/navigator_demo.dart';
 import './demo/form_demo.dart';
+import './demo/material_comp.dart';
+import './demo/http/http_demo.dart';
 
 void main() => runApp(new App());
 
@@ -23,6 +25,8 @@ class App extends StatelessWidget {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
         '/form': (context) => FormDemo(),
+        '/mdc': (context) => MaterialCmp(),
+        '/http': (context) => HttpDemo(),
       },
       // home: SliverDemo(),
       theme: ThemeData(
