@@ -28,5 +28,25 @@ final List<Post> posts = [
     title:'DDD',
     author:'DDDD',
     imgUrl:'http://img3.duitang.com/uploads/item/201601/03/20160103150641_s2trC.jpeg'
-  )
+  ),
+   Post(
+    title:'EEE',
+    author:'EEEE',
+    imgUrl:'http://b-ssl.duitang.com/uploads/blog/201404/25/20140425131629_zmN2P.thumb.700_0.jpeg'
+  ),
+  Post(
+    title:'FFF',
+    author:'FFFF',
+    imgUrl:'http://b-ssl.duitang.com/uploads/item/201609/04/20160904111916_CZHfn.thumb.700_0.jpeg'
+  ),
+  Post(
+    title:'GGG',
+    author:'GGGG',
+    imgUrl:'http://img3.duitang.com/uploads/item/201601/03/20160103150641_s2trC.jpeg'
+  ),
+  Post(
+    title:'HHH',
+    author:'HHHH',
+    imgUrl:'http://img3.duitang.com/uploads/item/201601/03/20160103150641_s2trC.jpeg'
+  ),
 ];
