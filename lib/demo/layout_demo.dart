@@ -96,6 +96,6 @@ class StackDemo extends StatelessWidget {
                 ),
               ),
             ],
-          );;
+          );
   }
 }

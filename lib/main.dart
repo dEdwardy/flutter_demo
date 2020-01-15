@@ -4,8 +4,9 @@ import './demo/drawer_demo.dart';
 import './demo/bottom_navigation_bar_demo.dart';
 import './demo/basic_demo.dart';
 import './demo/layout_demo.dart';
-import './demo/view_demo.dart';
-
+import './demo/sliver_demo.dart';
+import './demo/navigator_demo.dart';
+import './demo/form_demo.dart';
 
 void main() => runApp(new App());
 
@@ -15,11 +16,21 @@ class App extends StatelessWidget {
     return new MaterialApp(
       title: 'Welcome to Flutter',
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      // home: NavigatorDemo(),
+      //设置了initialRoute就不再设置home 反之亦然
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Home(),
+        '/about': (context) => Page(title: 'About'),
+        '/form': (context) => FormDemo(),
+      },
+      // home: SliverDemo(),
       theme: ThemeData(
-          primarySwatch: Colors.yellow,
-          highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
-          splashColor: Colors.white70),
+        primarySwatch: Colors.yellow,
+        highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+        splashColor: Colors.white,
+        accentColor: Color.fromRGBO(3, 54, 255, 1.0)
+      ),
     );
   }
 }
@@ -65,7 +76,7 @@ class Home extends StatelessWidget {
             BasicDemo(),
             // Icon(Icons.change_history, size: 128.0, color: Colors.black12),
             LayoutDemo(),
-            ViewDemo(),
+            SliverDemo(),
             // Icon(Icons.directions_bike, size: 128.0, color: Colors.black12)
           ],
         ),
