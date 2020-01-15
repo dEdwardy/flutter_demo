@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 import './demo/listview_demo.dart';
 import './demo/drawer_demo.dart';
 import './demo/bottom_navigation_bar_demo.dart';
+<<<<<<< HEAD
+=======
+import './demo/basic_demo.dart';
+import './demo/layout_demo.dart';
+import './demo/sliver_demo.dart';
+import './demo/navigator_demo.dart';
+import './demo/form_demo.dart';
+>>>>>>> sliver
 
 void main() => runApp(new App());
 
@@ -11,11 +19,21 @@ class App extends StatelessWidget {
     return new MaterialApp(
       title: 'Welcome to Flutter',
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      // home: NavigatorDemo(),
+      //设置了initialRoute就不再设置home 反之亦然
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Home(),
+        '/about': (context) => Page(title: 'About'),
+        '/form': (context) => FormDemo(),
+      },
+      // home: SliverDemo(),
       theme: ThemeData(
-          primarySwatch: Colors.yellow,
-          highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
-          splashColor: Colors.white70),
+        primarySwatch: Colors.yellow,
+        highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+        splashColor: Colors.white,
+        accentColor: Color.fromRGBO(3, 54, 255, 1.0)
+      ),
     );
   }
 }
@@ -24,7 +42,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
@@ -49,6 +67,7 @@ class Home extends StatelessWidget {
               Tab(icon: Icon(Icons.local_florist)),
               Tab(icon: Icon(Icons.change_history)),
               Tab(icon: Icon(Icons.directions_bike)),
+              Tab(icon: Icon(Icons.view_quilt)),
             ],
           ),
         ),
@@ -57,8 +76,16 @@ class Home extends StatelessWidget {
           children: <Widget>[
             ListViewDemo(),
             // Icon(Icons.local_florist, size: 128.0, color: Colors.black12),
+<<<<<<< HEAD
             Icon(Icons.change_history, size: 128.0, color: Colors.black12),
             Icon(Icons.directions_bike, size: 128.0, color: Colors.black12)
+=======
+            BasicDemo(),
+            // Icon(Icons.change_history, size: 128.0, color: Colors.black12),
+            LayoutDemo(),
+            SliverDemo(),
+            // Icon(Icons.directions_bike, size: 128.0, color: Colors.black12)
+>>>>>>> sliver
           ],
         ),
         drawer: DrawerDemo(),

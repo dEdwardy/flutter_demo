@@ -67,6 +67,21 @@ class DrawerDemo extends StatelessWidget {
                 ),
                 onTap: () => Navigator.pop(context),
               ),
+              ListTile(
+                title: Text(
+                  'Form',
+                  textAlign: TextAlign.right,
+                ),
+                trailing: Icon(
+                  Icons.power_input,
+                  color: Colors.black12,
+                  size: 22.0,
+                ),
+                onTap: (){
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, '/form');
+                },
+              ),
             ],
           ),
         );
