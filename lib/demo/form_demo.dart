@@ -42,6 +42,18 @@ class TextFieldDemo extends StatefulWidget {
 class _TextFieldDemoState extends State<TextFieldDemo> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return TextField(
+      decoration: InputDecoration(
+        icon: Icon(Icons.subject),
+        // labelText:'Username',
+        hintText: 'Input your username',
+        // border: OutlineInputBorder(),
+        filled: true,
+        fillColor: Colors.red[100],
+      ),
+      onChanged: (value) {
+        debugPrint(value);
+      },
+    );
   }
 }
