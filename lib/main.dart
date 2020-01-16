@@ -30,7 +30,7 @@ class App extends StatelessWidget {
         '/mdc': (context) => MaterialCmp(),
         '/http': (context) => HttpDemo(),
         '/animation': (context) => AnimationDemo(),
-        '/input': (context) => MaterialCmp(),
+        '/material': (context) => MaterialCmp(),
       },
       // home: SliverDemo(),
       theme: ThemeData(

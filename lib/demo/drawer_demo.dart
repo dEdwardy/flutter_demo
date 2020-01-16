@@ -115,7 +115,7 @@ class DrawerDemo extends StatelessWidget {
           ),
           ListTile(
             title: Text(
-              'InputDemo',
+              'Material Components',
               textAlign: TextAlign.right,
             ),
             trailing: Icon(
@@ -125,7 +125,7 @@ class DrawerDemo extends StatelessWidget {
             ),
             onTap: () {
               Navigator.pop(context);
-              Navigator.pushNamed(context, '/input');
+              Navigator.pushNamed(context, '/material');
             },
           ),
         ],

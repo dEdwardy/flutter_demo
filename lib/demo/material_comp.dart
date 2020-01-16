@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './input_demo.dart';
+import './dailog_demo.dart';
 
 
 class MaterialCmp extends StatelessWidget {
@@ -13,6 +14,7 @@ class MaterialCmp extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           ListItem(title: 'InputDemo',page: InputDemo()),
+          ListItem(title: 'DailogDemo',page: DailogDemo()),
         ],
       ),
     );
