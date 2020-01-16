@@ -141,8 +141,8 @@ class PageViewDemo extends StatelessWidget {
       // pageSnapping: false,
       // reverse: true,
       scrollDirection: Axis.vertical,
-      onPageChanged: (currentPageIndex) => {
-        debugPrint('PageIndex: $currentPageIndex')
+      onPageChanged: (currentPageIndex) {
+        print('PageIndex: $currentPageIndex');
       },
       controller: PageController(
         initialPage: 0,

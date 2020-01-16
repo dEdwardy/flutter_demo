@@ -10,7 +10,9 @@ class NavigatorDemo extends StatelessWidget {
           children: <Widget>[
             FlatButton(
               child: Text('Home'),
-              onPressed: () => {debugPrint('press Home')},
+              onPressed: () {
+                print('press Home');
+              },
             ),
             FlatButton(
               child: Text('About'),
@@ -19,7 +21,7 @@ class NavigatorDemo extends StatelessWidget {
                 //   MaterialPageRoute(
                 //     builder: (BuildContext context) => Page(title: 'About')),
                 // ),
-                Navigator.pushNamed(context,'/about');
+                Navigator.pushNamed(context, '/about');
               },
             )
           ],
@@ -43,7 +45,7 @@ class Page extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.arrow_back),
-        onPressed: (){
+        onPressed: () {
           Navigator.pop(context);
         },
       ),

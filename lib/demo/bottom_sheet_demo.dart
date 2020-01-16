@@ -127,7 +127,7 @@ class _BottomSheetDemoState extends State<BottomSheetDemo> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text('Your choice is  ${_choice}')
+                Text('Your choice is  $_choice')
               ],
             )
           ],

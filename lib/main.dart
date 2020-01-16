@@ -11,6 +11,8 @@ import './demo/material_comp.dart';
 import './demo/http/http_demo.dart';
 import './demo/animation/animation_demo.dart';
 import './demo/bottom_sheet_demo.dart';
+import './demo/snack_bar.dart';
+import './demo/expansion_panel.dart';
 
 void main() => runApp(new App());
 
@@ -32,6 +34,9 @@ class App extends StatelessWidget {
         '/animation': (context) => AnimationDemo(),
         '/material': (context) => MaterialCmp(),
         '/bottom_sheet': (context) => BottomSheetDemo(),
+        '/snack_bar': (context) => SnackBarDemo(),
+        '/snack_bar': (context) => SnackBarDemo(),
+        '/expansion_panel': (context) => ExpansionPanelDemo(),
       },
       // home: SliverDemo(),
       theme: ThemeData(

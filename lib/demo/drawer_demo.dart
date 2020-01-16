@@ -18,21 +18,22 @@ class DrawerDemo extends StatelessWidget {
                   'http://www.pp-sp.com/UploadFiles/img_2_2994068999_1999447165_26.jpg'),
             ),
             decoration: BoxDecoration(
-                color: Colors.yellow[400],
-                image: DecorationImage(
-                  image: NetworkImage(
-                    'http://img18.3lian.com/d/file/201706/09/c6106caa503817599ee748c7eabce754.jpg',
-                  ),
-                  fit: BoxFit.cover,
-                  colorFilter: ColorFilter.mode(
-                    Colors.yellow[400].withOpacity(0.6),
-                    BlendMode.hardLight,
-                  ),
-                )),
+              color: Colors.yellow[400],
+              image: DecorationImage(
+                image: NetworkImage(
+                  'http://img18.3lian.com/d/file/201706/09/c6106caa503817599ee748c7eabce754.jpg',
+                ),
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(
+                  Colors.yellow[400].withOpacity(0.6),
+                  BlendMode.hardLight,
+                ),
+              ),
+            ),
           ),
           ListTile(
             title: Text(
-              'Messages',
+              'Snack Bar',
               textAlign: TextAlign.right,
             ),
             trailing: Icon(
@@ -40,11 +41,14 @@ class DrawerDemo extends StatelessWidget {
               color: Colors.black12,
               size: 22.0,
             ),
-            onTap: () => Navigator.pop(context),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.of(context).pushNamed('/snack_bar');
+            },
           ),
           ListTile(
             title: Text(
-              'Favorite',
+              'Expansion_Panel',
               textAlign: TextAlign.right,
             ),
             trailing: Icon(
@@ -52,7 +56,10 @@ class DrawerDemo extends StatelessWidget {
               color: Colors.black12,
               size: 22.0,
             ),
-            onTap: () => Navigator.pop(context),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.of(context).pushNamed('/expansion_panel');
+            },
           ),
           ListTile(
             title: Text(
@@ -64,9 +71,7 @@ class DrawerDemo extends StatelessWidget {
               color: Colors.black12,
               size: 22.0,
             ),
-            onTap: () {
-              
-            },
+            onTap: () {},
           ),
           ListTile(
             title: Text(
