@@ -65,8 +65,7 @@ class DrawerDemo extends StatelessWidget {
               size: 22.0,
             ),
             onTap: () {
-              Navigator.pop(context);
-              Navigator.pushNamed(context, '/mdc');
+              
             },
           ),
           ListTile(
@@ -97,6 +96,36 @@ class DrawerDemo extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
               Navigator.pushNamed(context, '/http');
+            },
+          ),
+          ListTile(
+            title: Text(
+              'AnimationDemo',
+              textAlign: TextAlign.right,
+            ),
+            trailing: Icon(
+              Icons.assignment_late,
+              color: Colors.black12,
+              size: 22.0,
+            ),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/animation');
+            },
+          ),
+          ListTile(
+            title: Text(
+              'InputDemo',
+              textAlign: TextAlign.right,
+            ),
+            trailing: Icon(
+              Icons.insert_comment,
+              color: Colors.black12,
+              size: 22.0,
+            ),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/input');
             },
           ),
         ],

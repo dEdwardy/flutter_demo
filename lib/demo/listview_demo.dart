@@ -14,7 +14,7 @@ class ListViewDemo extends StatelessWidget {
               AspectRatio(
                 aspectRatio: 16.0 / 9.0,
                 child: Image.network(
-                  posts[index].imgUrl,
+                  posts[index].imageUrl,
                   fit: BoxFit.cover,
                 ),
               ),

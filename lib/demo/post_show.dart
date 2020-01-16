@@ -16,7 +16,7 @@ class PostShow extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Image.network(post.imgUrl),
+            Image.network(post.imageUrl),
             Container(
               padding: EdgeInsets.all(24.0),
               width: double.infinity,

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class BasicDemo extends StatelessWidget {
-  final String imgUrl = 'http://image.biaobaiju.com/uploads/20181223/21/1545570640-CtVFKQTvdI.jpg';
+  final String imageUrl = 'http://image.biaobaiju.com/uploads/20181223/21/1545570640-CtVFKQTvdI.jpg';
   @override
   Widget build(BuildContext context) {
     return Container(
       // color: Colors.grey[100],
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage(imgUrl),
+          image: NetworkImage(imageUrl),
           alignment: Alignment.topCenter,
           // repeat: ImageRepeat.repeatY,
           fit: BoxFit.cover,

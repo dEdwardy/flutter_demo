@@ -18,6 +18,30 @@ class FormDemo extends StatelessWidget {
   }
 }
 
+class InputDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'InputDemo'
+        ),
+        elevation: 0.0,
+      ),
+      body: Theme(
+        data: Theme.of(context).copyWith(primaryColor: Colors.red),
+        child: Container(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[RegisterForm()],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class ThemeDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

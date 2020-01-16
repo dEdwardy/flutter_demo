@@ -12,7 +12,7 @@ class GridViewBuilderDemo extends StatelessWidget {
   Widget _gridItemBuilder(BuildContext context, int index) {
     return Container(
       child: Image.network(
-        posts[index].imgUrl,
+        posts[index].imageUrl,
         fit: BoxFit.cover,
       ),
     );
@@ -94,7 +94,7 @@ class PageViewBuilderDemo extends StatelessWidget {
       children: <Widget>[
         SizedBox.expand(
           child: Image.network(
-            posts[index].imgUrl,
+            posts[index].imageUrl,
             fit: BoxFit.cover,
           ),
         ),

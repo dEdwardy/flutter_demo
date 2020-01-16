@@ -9,6 +9,8 @@ import './demo/navigator_demo.dart';
 import './demo/form_demo.dart';
 import './demo/material_comp.dart';
 import './demo/http/http_demo.dart';
+import './demo/animation/animation_demo.dart';
+
 
 void main() => runApp(new App());
 
@@ -27,10 +29,12 @@ class App extends StatelessWidget {
         '/form': (context) => FormDemo(),
         '/mdc': (context) => MaterialCmp(),
         '/http': (context) => HttpDemo(),
+        '/animation': (context) => AnimationDemo(),
+        '/input': (context) => MaterialCmp(),
       },
       // home: SliverDemo(),
       theme: ThemeData(
-        primarySwatch: Colors.yellow,
+        primarySwatch: Colors.red,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
         splashColor: Colors.white,
         accentColor: Color.fromRGBO(3, 54, 255, 1.0)

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './input_demo.dart';
+
 
 class MaterialCmp extends StatelessWidget {
   @override
@@ -10,7 +12,7 @@ class MaterialCmp extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
-          ListItem(title: 'MaterialComponents',page: FloatingActionButtonDemo())
+          ListItem(title: 'InputDemo',page: InputDemo()),
         ],
       ),
     );
@@ -27,7 +29,8 @@ class FloatingActionButtonDemo extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
-          ListItem(title: 'MaterialComponents',page: FloatingActionButtonDemo())
+          // ListItem(title: 'MaterialComponents',page: FloatingActionButtonDemo()),
+          ListItem(title: 'InputDemo',page: InputDemo()),
         ],
       ),
     );

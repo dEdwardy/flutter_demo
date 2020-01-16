@@ -60,7 +60,7 @@ class SliverListDemo extends StatelessWidget {
                   AspectRatio(
                     aspectRatio: 16.0 / 9.0,
                     child: Image.network(
-                      posts[index].imgUrl,
+                      posts[index].imageUrl,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -99,7 +99,7 @@ class SliverGridDemo extends StatelessWidget {
       delegate: SliverChildBuilderDelegate(
         (BuildContext context, int index) {
           return Container(
-            child: Image.network(posts[index].imgUrl, fit: BoxFit.cover),
+            child: Image.network(posts[index].imageUrl, fit: BoxFit.cover),
           );
         },
         childCount: posts.length,
