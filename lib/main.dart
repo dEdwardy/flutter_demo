@@ -10,7 +10,7 @@ import './demo/form_demo.dart';
 import './demo/material_comp.dart';
 import './demo/http/http_demo.dart';
 import './demo/animation/animation_demo.dart';
-
+import './demo/bottom_sheet_demo.dart';
 
 void main() => runApp(new App());
 
@@ -31,6 +31,7 @@ class App extends StatelessWidget {
         '/http': (context) => HttpDemo(),
         '/animation': (context) => AnimationDemo(),
         '/material': (context) => MaterialCmp(),
+        '/bottom_sheet': (context) => BottomSheetDemo(),
       },
       // home: SliverDemo(),
       theme: ThemeData(

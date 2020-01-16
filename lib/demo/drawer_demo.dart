@@ -128,6 +128,21 @@ class DrawerDemo extends StatelessWidget {
               Navigator.pushNamed(context, '/material');
             },
           ),
+          ListTile(
+            title: Text(
+              'Bottom Sheet',
+              textAlign: TextAlign.right,
+            ),
+            trailing: Icon(
+              Icons.insert_comment,
+              color: Colors.black12,
+              size: 22.0,
+            ),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/bottom_sheet');
+            },
+          ),
         ],
       ),
     );
