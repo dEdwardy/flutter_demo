@@ -1,5 +1,6 @@
 class Post {
-  const Post({this.id, this.title, this.author, this.imageUrl, this.description});
+  const Post(
+      {this.id, this.title, this.author, this.imageUrl, this.description});
   Post.fromJson(Map json)
       : id = json['id'],
         title = json['title'],

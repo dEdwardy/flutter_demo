@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BasicDemo extends StatelessWidget {
-  final String imageUrl = 'http://image.biaobaiju.com/uploads/20181223/21/1545570640-CtVFKQTvdI.jpg';
+  final String imageUrl =
+      'http://image.biaobaiju.com/uploads/20181223/21/1545570640-CtVFKQTvdI.jpg';
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -34,18 +35,16 @@ class BasicDemo extends StatelessWidget {
             decoration: BoxDecoration(
               color: Color.fromRGBO(3, 54, 255, 1.0),
               border: Border.all(
-                color: Colors.indigoAccent[100],
-                width: 3.0,
-                style: BorderStyle.solid
-              ),
+                  color: Colors.indigoAccent[100],
+                  width: 3.0,
+                  style: BorderStyle.solid),
               // borderRadius: BorderRadius.circular(16.0),
               boxShadow: [
                 BoxShadow(
-                  offset: Offset(2.0,2.0),
-                  color: Color.fromRGBO(16, 20, 188, 1.0),
-                  blurRadius: 16.0,
-                  spreadRadius: 1.0
-                ),
+                    offset: Offset(2.0, 2.0),
+                    color: Color.fromRGBO(16, 20, 188, 1.0),
+                    blurRadius: 16.0,
+                    spreadRadius: 1.0),
               ],
               shape: BoxShape.circle,
               // gradient: RadialGradient(
@@ -54,14 +53,14 @@ class BasicDemo extends StatelessWidget {
               //     Color.fromRGBO(3, 28, 128, 1.0),
               //   ],
               // ),
-              gradient: LinearGradient(
-                colors: [
-                  Color.fromRGBO(7, 102, 255, 1.0),
-                  Color.fromRGBO(3, 28, 128, 1.0),
-                ],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              ),
+              // gradient: LinearGradient(
+              //   colors: [
+              //     Color.fromRGBO(7, 102, 255, 1.0),
+              //     Color.fromRGBO(3, 28, 128, 1.0),
+              //   ],
+              //   begin: Alignment.topCenter,
+              //   end: Alignment.bottomCenter,
+              // ),
             ),
           ),
         ],

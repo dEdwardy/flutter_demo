@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import './demo/listview_demo.dart';
 import './demo/drawer_demo.dart';
 import './demo/bottom_navigation_bar_demo.dart';
 import './demo/basic_demo.dart';
 import './demo/layout_demo.dart';
 import './demo/sliver_demo.dart';
+// ignore: unused_import
 import './demo/navigator_demo.dart';
 import './demo/form_demo.dart';
 import './demo/material_comp.dart';
@@ -13,6 +15,8 @@ import './demo/animation/animation_demo.dart';
 import './demo/bottom_sheet_demo.dart';
 import './demo/snack_bar.dart';
 import './demo/expansion_panel.dart';
+// ignore: unused_import
+import 'package:flutter_plugin_qrcode/flutter_plugin_qrcode.dart';
 
 void main() => runApp(new App());
 
@@ -27,7 +31,7 @@ class App extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => Home(),
-        '/about': (context) => Page(title: 'About'),
+        // '/about': (context) => Page(title: 'About'),
         '/form': (context) => FormDemo(),
         '/mdc': (context) => MaterialCmp(),
         '/http': (context) => HttpDemo(),
@@ -40,11 +44,10 @@ class App extends StatelessWidget {
       },
       // home: SliverDemo(),
       theme: ThemeData(
-        primarySwatch: Colors.red,
-        highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
-        splashColor: Colors.white,
-        accentColor: Color.fromRGBO(3, 54, 255, 1.0)
-      ),
+          primarySwatch: Colors.red,
+          highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+          splashColor: Colors.white,
+          accentColor: Color.fromRGBO(3, 54, 255, 1.0)),
     );
   }
 }
@@ -52,6 +55,24 @@ class App extends StatelessWidget {
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Future<void> getQrcodeState() async {
+      // debugPrint('Search Button is pressed');
+      String code;
+      try {
+        code = await FlutterPluginQrcode.getQRCode;
+      } on PlatformException {
+        code = 'error';
+      }
+      debugPrint(code);
+      await showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return SimpleDialog(
+              title: Text(code),
+            );
+          });
+    }
+
     return DefaultTabController(
       length: 4,
       child: Scaffold(
@@ -59,15 +80,14 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           actions: <Widget>[
             IconButton(
-              icon: Icon(Icons.search),
-              tooltip: 'Search',
-              onPressed: () => debugPrint('Search Button is pressed'),
-            ),
+                icon: Icon(Icons.search),
+                tooltip: 'Search',
+                // ignore: sdk_version_set_literal
+                onPressed: () => getQrcodeState()),
           ],
-          title: Text(
-            'Edw4rd',
-            textAlign: TextAlign.center,
-          ),
+          title: Text('Edw4rd',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.white)),
           elevation: 0.0,
           bottom: TabBar(
             unselectedLabelColor: Colors.black38,

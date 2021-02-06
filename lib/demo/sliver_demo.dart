@@ -19,10 +19,10 @@ class SliverDemo extends StatelessWidget {
                 'Flutter'.toUpperCase(),
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 15.0,
-                  letterSpacing: 3.0,
-                  fontWeight: FontWeight.w400,
-                ),
+                    fontSize: 15.0,
+                    letterSpacing: 3.0,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.red[200]),
               ),
               background: Image.network(
                 'http://img18.3lian.com/d/file/201706/09/c6106caa503817599ee748c7eabce754.jpg',

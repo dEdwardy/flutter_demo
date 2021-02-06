@@ -10,12 +10,13 @@ class DrawerDemo extends StatelessWidget {
           UserAccountsDrawerHeader(
             accountName: Text(
               'Edw4rd',
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red),
             ),
-            accountEmail: Text('957196958@qq.com'),
+            accountEmail:
+                Text('957196958@qq.com', style: TextStyle(color: Colors.red)),
             currentAccountPicture: CircleAvatar(
               backgroundImage: NetworkImage(
-                  'http://www.pp-sp.com/UploadFiles/img_2_2994068999_1999447165_26.jpg'),
+                  'https://ss2.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2994068999,1999447165&fm=26&gp=0.jpg'),
             ),
             decoration: BoxDecoration(
               color: Colors.yellow[400],
